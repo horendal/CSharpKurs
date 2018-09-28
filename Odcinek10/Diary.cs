@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StudentDiary
+namespace Odcinek10
 {
     class Diary
     {
