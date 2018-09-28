@@ -18,10 +18,11 @@ namespace Hello
                 Age();
                 Settings();
             }
-
-
         }
 
+        /// <summary>
+        /// Wypisuje min i max wartości typów.
+        /// </summary>
         private static void valueTypes()
         {
             int maxInt = int.MaxValue;
