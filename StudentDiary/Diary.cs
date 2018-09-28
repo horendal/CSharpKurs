@@ -25,38 +25,55 @@ namespace StudentDiary
             ratings.Add(rating);
         }
 
-        /// <summary>
-        /// Oblicza średnią ocen z listy.
-        /// </summary>
-        /// <returns></returns>
-        public float CalculateAverage()
+        internal DiaryStatistics ComputeStatistics()
         {
-            float suma = 0, avg = 0;
-                
+            DiaryStatistics stats = new DiaryStatistics();
+            float suma = 0f;
+
             foreach (var rating in ratings)
             {
                 suma += rating;     //to samo co: sum = sum + rating;
             }
-            avg = suma / ratings.Count();
-            return avg;
+
+            stats.averageGrade = suma / ratings.Count();
+            stats.maxGrade = ratings.Max();
+            stats.minGrade = ratings.Min();
+
+            return stats;
         }
+
+        /// <summary>
+        /// Oblicza średnią ocen z listy.
+        /// </summary>
+        /// <returns></returns>
+        //public float CalculateAverage()
+        //{
+        //    float suma = 0, avg = 0;
+                
+        //    foreach (var rating in ratings)
+        //    {
+        //        suma += rating;     //to samo co: sum = sum + rating;
+        //    }
+        //    avg = suma / ratings.Count();
+        //    return avg;
+        //}
 
         /// <summary>
         /// Podaje najwyższą ocnę z listy.
         /// </summary>
         /// <returns></returns>
-        public float GiveMaxRating()
-        {
-            return ratings.Max();
-        }
+        //public float GiveMaxRating()
+        //{
+        //    return ratings.Max();
+        //}
 
         /// <summary>
         /// Podaje najniższą ocenę z listy.
         /// </summary>
         /// <returns></returns>
-        public float GiveMinRating()
-        {
-            return ratings.Min();
-        }
+        //public float GiveMinRating()
+        //{
+        //    return ratings.Min();
+        //}
     }
 }

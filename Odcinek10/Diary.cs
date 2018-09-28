@@ -16,10 +16,11 @@ namespace Odcinek10
         List<float> ratings;
 
         // Zachowania
+        
         /// <summary>
         /// Dodaje oceny do listy
         /// </summary>
-        /// <param name="rating"></param>
+        /// <param name="rating">Nowa ocena typu float</param>
         public void AddRating(float rating)     
         {
             ratings.Add(rating);
