@@ -10,6 +10,8 @@ namespace Hello
     {
         static void Main(string[] args)
         {
+            valueTypes();
+
             for (; ;)
             {
                 Greeting();
@@ -20,13 +22,29 @@ namespace Hello
 
         }
 
+        private static void valueTypes()
+        {
+            int maxInt = int.MaxValue;
+            int minInt = int.MinValue;
+            long maxLong = long.MaxValue;
+            long minLong = long.MinValue;
+
+            Console.WriteLine("maxInt = " + maxInt + "\nminInt = " + minInt + "\nmaxLong = " + maxLong + "\nminLong = " + minLong);
+        }
+
+        /// <summary>
+        /// Ustawienia.
+        /// </summary>
         private static void Settings()
         {
             Console.ReadKey();
             Console.Clear();
             Console.ResetColor();
         }
-
+        
+        /// <summary>
+        /// Wypisuje komunikat zależnie od wieku.
+        /// </summary>
         private static void Age()
         {
             Console.Write("Wpisz ile masz lat: ");
@@ -49,6 +67,9 @@ namespace Hello
             }
         }
 
+        /// <summary>
+        /// Wpisujemy powitanie użytkownika i pytam o Imię.
+        /// </summary>
         private static void Greeting()
         {
             Console.Write("Wpisz swoje imię: ");
