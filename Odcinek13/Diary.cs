@@ -9,6 +9,8 @@ namespace StudentDiary
         public Diary()      //konstruktor
         {
             ratings = new List<float>();
+            Count++;
+            Count2++;
         }
         
         // Stan (zmienne - pola)
@@ -16,7 +18,9 @@ namespace StudentDiary
         List<float> ratings;
 
         public static float minGrade = 0;
-        public static float maxGrade = 0;
+        public static float maxGrade = 10;
+        public static long Count = 0;
+        public long Count2 = 0;
 
         // Zachowania
         /// <summary>
